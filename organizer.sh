@@ -21,7 +21,7 @@ for arquivo in *; do
 	
 	contador=$((contador + 1))
 	
-	echo "[$(date)] $arquivo -> $ext/" "$LOG_FILE"
+	echo "[$(date)] $arquivo -> $ext/" >> "$LOG_FILE"
 	 
 done
 
