@@ -1,15 +1,15 @@
 #!/bin/bash
 
 BASE_DIR="$(pwd)"
-LOG_FILE="$BASE_DIR/Bash-Script/logs/log.txt"
+LOG_FILE="$BASE_DIR/logs/log.txt"
 
-mkdir -p $(dirname "$LOG_FILE")"
+mkdir -p "$(dirname "$LOG_FILE")"
 
 contador=0
 
 for arquivo in *; do
-	[[ -d $arquivo ]] && continue
-	[[ $arquivo == "$(basename "$0")" ]] && continue
+	[[ -d "$arquivo" ]] && continue
+	[[ "$arquivo" == "$(basename "$0")" ]] && continue
 	ext="${arquivo##*.}"
 	
 	if [[ "$arquivo" == "$ext" ]]; then
